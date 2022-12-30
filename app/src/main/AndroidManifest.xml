@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.project.letsnote">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".login.Login"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".login.FacebookLogout"
+            android:label="@string/title_activity_logout" />
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+            android:enabled="true" />
+
+        <activity android:name=".MenuActivity" />
+        <activity
+            android:name=".AddPhotoActivity"
+            android:label="@string/title_activity_add_photo"
+            android:parentActivityName=".MapsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.letsnote.MapsActivity" />
+        </activity>
+        <activity
+            android:name=".AddVideoActivity"
+            android:label="@string/title_activity_add_video"
+            android:parentActivityName=".MapsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.letsnote.MapsActivity" />
+        </activity>
+        <activity
+            android:name=".DetailActivity"
+            android:label="@string/title_activity_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PerfilAjeno"
+            android:label="@string/title_activity_perfil_ajeno"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MiPerfil"
+            android:label="@string/title_activity_mi_perfil"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".follows.SeguidosActivity"
+            android:label="@string/title_activity_seguidos"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".follows.SeguidoresActivity"
+            android:label="@string/title_activity_seguidores"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ListaNotasActivity"
+            android:label="@string/title_activity_lista_notas"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".comments.ComentarioActivity"
+            android:label="@string/title_activity_comentario"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".CambiarDescripcion"
+            android:label="@string/title_activity_cambiardescripcion"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.project.letsnote.MapsActivity">
+    <item
+        android:id="@+id/item_uno"
+        android:orderInCategory="100"
+        android:title="@string/action_map"
+        app:showAsAction="always"
+        android:icon="@drawable/menu_item_uno"/>
+
+    <item
+        android:id="@+id/item_dos"
+        android:orderInCategory="100"
+        android:title="@string/action_notes"
+        app:showAsAction="always"
+        android:icon="@drawable/menu_item_dos"/>
+
+    <item
+        android:id="@+id/item_tres"
+        android:orderInCategory="100"
+        android:title="@string/action_profile"
+        app:showAsAction="always"
+        android:icon="@drawable/profile"/>
+    <item
+        android:id="@+id/item_cuatro"
+        android:orderInCategory="100"
+        android:title="@string/action_logout"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/messages"/>
+</menu>
